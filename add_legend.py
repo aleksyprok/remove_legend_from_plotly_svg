@@ -7,8 +7,14 @@ output_dir = os.path.join(root_dir, "output_svgs")
 # --- Paths ---
 # input_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_50ms_limited_wo_legend.svg")
 # output_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_50ms_limited_with_legend.svg")
-input_svg = os.path.join(output_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_wo_legend.svg")
-output_svg = os.path.join(output_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_with_legend.svg")
+# input_svg = os.path.join(output_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_wo_legend.svg")
+# output_svg = os.path.join(output_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_with_legend.svg")
+# input_svg = os.path.join(output_dir, "gsfit_blue_pfit_green_14684_248ms_weird_pfit_wo_legend.svg")
+# output_svg = os.path.join(output_dir, "gsfit_blue_pfit_green_14684_248ms_weird_pfit_with_legend.svg")
+# input_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_248ms_weird_pfit_wo_legend.svg")
+# output_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_248ms_weird_pfit_with_legend.svg")
+input_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_150ms_diverted_wo_legend.svg")
+output_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_150ms_diverted_with_legend.svg")
 
 # --- Parse SVG ---
 parser = etree.XMLParser(remove_blank_text=True)
@@ -30,14 +36,18 @@ bg_rect = etree.Element("{http://www.w3.org/2000/svg}rect", width="120", height=
 legend_group.append(bg_rect)
 
 # Legend items with line symbols
+items = [
+    {"label": "GSFit", "color": "#1f77b4", "y": legend_y + 20},
+    {"label": "RT-GFit", "color": "#ff7f0e", "y": legend_y + 40},
+]
+# items = [
+#     {"label": "RT-GFit", "color": "#ff7f0e", "y": legend_y + 20},
+#     {"label": "PFit", "color": "#2ca02c", "y": legend_y + 40},
+# ]
 # items = [
 #     {"label": "GSFit", "color": "#1f77b4", "y": legend_y + 20},
-#     {"label": "RT-GFit", "color": "#ff7f0e", "y": legend_y + 40},
+#     {"label": "PFit", "color": "#2ca02c", "y": legend_y + 40},
 # ]
-items = [
-    {"label": "RT-GFit", "color": "#ff7f0e", "y": legend_y + 20},
-    {"label": "PFit", "color": "#2ca02c", "y": legend_y + 40},
-]
 
 for item in items:
     # Colored line

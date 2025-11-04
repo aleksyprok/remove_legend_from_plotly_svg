@@ -10,8 +10,14 @@ output_dir = os.path.join(root_dir, "output_svgs")
 # --- input and output files ---
 # input_svg = os.path.join(input_dir, "gsfit_blue_rtgsfit_orange_14684_50ms_limited_w_legend.svg")
 # output_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_50ms_limited_wo_legend.svg")
-input_svg = os.path.join(input_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_w_legend.svg")
-output_svg = os.path.join(output_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_wo_legend.svg")
+# input_svg = os.path.join(input_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_w_legend.svg")
+# output_svg = os.path.join(output_dir, "rtgsfit_orange_pfit_green_14684_50ms_limitied_wo_legend.svg")
+# input_svg = os.path.join(input_dir, "gsfit_blue_pfit_green_14684_248ms_weird_pfit_w_legend.svg")
+# output_svg = os.path.join(output_dir, "gsfit_blue_pfit_green_14684_248ms_weird_pfit_wo_legend.svg")
+# input_svg = os.path.join(input_dir, "gsfit_blue_rtgsfit_orange_14684_248ms_weird_pfit_w_legend.svg")
+# output_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_248ms_weird_pfit_wo_legend.svg")
+input_svg = os.path.join(input_dir, "gsfit_blue_rtgsfit_orange_14684_150ms_diverted_w_legend.svg")
+output_svg = os.path.join(output_dir, "gsfit_blue_rtgsfit_orange_14684_150ms_diverted_wo_legend.svg")
 
 # --- parse SVG ---
 parser = etree.XMLParser(remove_blank_text=True)
